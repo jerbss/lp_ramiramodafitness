@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Ramira Moda Fitness{% endblock %}</title>
+    <meta name="description" content="{% block description %}Ramira Moda Fitness - Moda fitness exclusiva para você{% endblock %}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        {% block header %}
+        <!-- O conteúdo do cabeçalho será inserido aqui -->
+        {% endblock %}
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- O conteúdo principal será inserido aqui -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+        <!-- O conteúdo do rodapé será inserido aqui -->
+        {% endblock %}
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{% static 'main/js/scripts.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    """View para a página inicial da Ramira Moda Fitness"""
+    return render(request, 'main/index.html')
